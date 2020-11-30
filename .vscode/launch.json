@@ -11,6 +11,14 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal"
+        },
+
+        {
+            "name": "Python: builder",
+            "type": "python",
+            "request": "launch",
+            "program": "builder/builder.py",
+            "console": "integratedTerminal"
         }
     ]
 }

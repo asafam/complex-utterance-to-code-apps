@@ -3,16 +3,18 @@
 1	S	COND	void
 1	S	LOOP	void
 
-1	SEQ		Atomic \n SEQ		void
 1	SEQ		COND \n SEQ			void
 1	SEQ		LOOP \n SEQ			void
+3	SEQ		COND				void
+3	SEQ		LOOP				void
+3	SEQ		Atomic \n SEQ		void
 5	SEQ		Atomic \n Atomic	void
 
 1	COND	if BOOL :\n\t SEQ					void
 1	COND	if BOOL :\n\t SEQ \n else: \n\t SEQ	void
 
 1	LOOP	for item in List :\n\t SEQ		void
-1	LOOP	for i in range( Int ):\n\t SEQ	void
+1	LOOP	for i in range( int_pos ):\n\t SEQ	void
 1	LOOP	while BOOL : \n\t SEQ			void
 
 1	BOOL	Bool and BOOL	bool
@@ -23,15 +25,16 @@
 1	Atomic	STR		str
 1	Atomic	LIST	list
 
-10	STR		Str .replace ( str_short , str_short )	str
+1	STR		Str .replace ( str_short , str_short )	str
 1	STR		Str .upper()	str
 1	STR		Str .lower()	str
 
-1 	Str		STR	str
-2	Str		str	str
+1 	Str		STR				str
+3 	Str		( STR + str )	str
+5	Str		str				str
 
-1	LIST	reverse( List )	list
-1	LIST	range( int )	list
+1	LIST	reverse( List )		list
+1	LIST	range( int_pos )	list
 
 1	List	LIST	list
 2	List	list	list
@@ -46,8 +49,8 @@
 1	str_word	"success"	str_word
 1	str_word	"key"		str_word
 
-1	str_short	"."	str_short
-1	str_short	","	str_short
+1	str_short	"."			str_short
+1	str_short	","			str_short
 
 1	Bool	Str isupper()	bool
 1	Bool	Str islower()	bool
@@ -57,18 +60,22 @@
 1	Int	len( List )	int
 1	Int	index( str_short , Str )	int
 1	Int	index( str_short , List )	int
-2	Int	int	int
+1	Int	Int + int	int
+2	Int	int			int
 
-1	int	9	int
-1	int	8	int
-1	int	7	int
-1	int	6	int
-1	int	5	int
-1	int	4	int
-1	int	3	int
-1	int	2	int
-1	int	1	int
-1	int	0	int
-1	int	-1	int
-1	int	-2	int
-1	int	-3	int
+1	int	int_pos int
+1	int	int_neg	int
+
+1	int_pos	9	int
+1	int_pos	8	int
+1	int_pos	7	int
+1	int_pos	6	int
+1	int_pos	5	int
+1	int_pos	4	int
+1	int_pos	3	int
+1	int_pos	2	int
+1	int_pos	1	int
+1	int_pos	0	int
+1	int_neg	-1	int
+1	int_neg	-2	int
+1	int_neg	-3	int
