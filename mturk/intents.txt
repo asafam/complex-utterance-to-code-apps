@@ -1,0 +1,57 @@
+alarm	Get alarm	void
+alarm	Create alarm	void
+alarm	Delete alarm	void
+alarm	Snooze alarm	void
+alarm	Update alarm	void
+alarm	Has alarm	bool
+alarm	Is alarm on/off/snoozed	bool
+Apps	Request a ride	void	Order a ride share for you on your favorite ride sharing app
+Apps	Order a coffee	void	Order a coffee to go for you from your favorite cafe
+Apps	Start a workout	void	Start a workout session on your favorite workout app
+#Event	Get event	void	Get event information
+Event	Has event	bool	Get event information
+Location	Get location	void	
+Location	Has location	void	
+Messaging	Send message	void	Send a text message to anyone on your contact list
+Messaging	React message	void	Reply to a text message
+#Messaging	Read message	void
+Messaging	Has message	void	Check if you have messages
+#Music	Play music	void
+#Music	Pause music	void
+#Music	Replay music	void
+#Music	Skip music	void
+#Music	Shuffle playlist	void
+#Music	Add to playlist	void
+#Music	Remove from playlist	void
+#Music	Like music	void
+#Music	Dislike music	void
+#Music	Is music liked/disliked	bool
+#Music	Is music in playlist	bool
+#Music	Is music playing	bool
+Navigation	Get distance	void
+Navigation	Get direction	void
+Navigation	Get estimated arrival	void	Get an estimated time of arrival
+Navigation	Get estimated departure	void	Tell you the time you should depart for your travel
+Navigation	Get estimated duration	void
+Navigation	Get traffic info	void
+Navigation	Is distance	bool
+Navigation	Is estimated arrival	bool	Get an estimated time of arrival
+Navigation	Is estimated departure	bool	Tell you the time you should depart for your travel
+Navigation	Is estimated duration	bool	Get the estimated travel duration 
+Navigation	Is traffic condition	bool	Get traffic information for you
+Reminder	Create reminder	void	Create a reminder
+Reminder	Update reminder	void	Update a reminder
+Reminder	Delete reminder	void	Delete a reminder
+#Reminder	Has reminder	bool	Check if you have a reminder
+Timer	Create timer	void
+Timer	Delete timer	void
+Timer	Update timer	void
+Timer	Start timer	void
+Timer	Restart timer	void
+Timer	Pause timer	void
+Timer	Resume timer	void
+Timer	Is timer running	bool
+Timer	Is timer paused	bool
+Timer	Is timer completed	bool
+Weather	Get weather	void	Get weather information
+Weather	Is weather	bool	Get weather information

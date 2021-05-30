@@ -18,7 +18,31 @@
             "type": "python",
             "request": "launch",
             "program": "builder/builder.py",
+            "args": [
+                "lexicons/lexicon.txt",
+                "3",
+            ],
             "console": "integratedTerminal"
-        }
+        },
+
+        {
+            "name": "Python: mturk",
+            "type": "python",
+            "request": "launch",
+            "program": "mturk/mturk.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--limit",
+                "50",
+                "--inputfile",
+                "mturk/input-v5.yaml"
+                "--outputfile",
+                "mturk/output",
+                "--intentcount",
+                "6",
+                "--linkwordscount",
+                "5"
+            ],
+        },
     ]
 }
