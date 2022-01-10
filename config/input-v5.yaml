@@ -74,7 +74,7 @@ intents:
     - name: Get event
       void: false
       bool: true
-      description: based on calendar events or availability
+      description: Get information on calendar events or availability
       intent: Get information on calendar events or availability
       returns: calendar events or availability
   events:
@@ -84,21 +84,27 @@ intents:
       description: Get information on a public event
       intent: Inquire information on a public event
       returns: information on a public event
+    - name: Buy ticket
+      void: true
+      bool: true
+      description: Order tickets online for an event
+      intent: Order tickets online for an event
+      returns: tickets purchased
   messaging:
     - name: Send message
       void: true
       bool: false
-      description: send a text message to anyone on your contact list
+      description: Send a text message to anyone on your contact list
       intent: Send a text message to anyone on your contact list
     - name: Reply message
       void: true
       bool: false
-      description: reply to a text message
+      description: Reply to a text message
       intent: Reply to a text message
     - name: Get message
       void: false
       bool: true
-      description: check text messages you got (in general or from someone on you contact list)
+      description: Check text messages you got (in general or from someone on you contact list)
       intent: Check text messages you got (in general or from someone on you contact list)
       returns: text messages you got
   music:
@@ -157,12 +163,6 @@ intents:
       description: Get the time to depart to get to somewhere
       intent: Inquire on the time to depart to get to somewhere
       returns: the time to depart to get to somewhere
-    - name: Get estimated duration
-      void: true
-      bool: true
-      description: Get the duration of a drive
-      intent: Inquire on the duration of a drive
-      returns: the duration of a drive
     - name: Get traffic
       void: true
       bool: true
@@ -279,25 +279,20 @@ link_words:
   - in order that
   - in that
   - in the event that
-  - lest
   - no matter how
   - now that
   - once
   - only
   - only if
-  - provided
   - provided that
   - since
-  - so
   - so that
   - supposing
-  - than
+  # - than
   - that
   - though
-  - till
   - unless
   - until
-  - until, when
   - when
   - whenever
   - where

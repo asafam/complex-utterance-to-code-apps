@@ -1,0 +1,23 @@
+conditionals:
+  - display: if
+  - display: should
+  - display: unless
+  - display: providing / provided (that)
+    verification: 
+      - providing
+      - provided
+      - provided that
+  - display: unless
+  - display: as / so long as 
+    verification: 
+      - as long as
+      - so long as
+  - display: only if
+  - display: in the event
+  - display: in case
+  - display: or / otherwise
+    verification: 
+      - or 
+      - otherwise
+  - display: if not
+  - display: even if 

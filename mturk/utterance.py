@@ -8,20 +8,23 @@ CATEGORY_CONDITION = 'cond'
 
 class Utterance:
     
-    def __init__(self, all_scenarios, all_domains_groups, all_intents, link_words, quantifiers):
+    def __init__(self, all_scenarios, all_domains_groups, all_intents, link_words, quantifiers, seed=None):
         self.all_scenarios = all_scenarios
         self.all_domains_groups = all_domains_groups
         self.all_intents = all_intents
-        self.link_words = link_words
-        self.quantifiers = quantifiers
+        self.all_link_words = link_words
+        self.all_quantifiers = quantifiers
+        if seed:
+            random.seed(seed)
         
-    def sample(self, intents_count, link_words_count, quantifiers_count):
+    def sample(self, intents_count, link_words_count, quantifiers_count, min_intents_values=[2, 3, 4], min_intents_weights=[0.85, 0.13, 0.02]):
         scenario = self.sample_scenario(self.all_scenarios)
-        category, intents, link_words, quantifiers = self.sample_intents(intents_count, link_words_count, quantifiers_count)
-        link_word_idx = random.choice(range(len(intents))) if link_word else None
-        quantifier_idx = random.choice(range(len(intents))) if quantifier else None
+        intents, link_words, quantifiers = self.sample_intents(intents_count, link_words_count, quantifiers_count)
+        link_word_idx = random.choice(range(len(intents))) if link_words else None
+        quantifier_idx = random.choice(range(len(intents))) if quantifiers else None
+        min_intents = random.choices(min_intents_values, weights=min_intents_weights, k=1)[0]
         
-        return scenario, intents, category, link_word, link_word_idx, quantifier, quantifier_idx
+        return scenario, intents, link_words, link_word_idx, quantifiers, quantifier_idx, min_intents
         
     def sample_scenario(self, all_scenarios):
         scenario = random.choice(all_scenarios)
@@ -55,44 +58,46 @@ class Utterance:
     def sample_intents(self, intents_count, link_words_count, quantifiers_count, ratio_seq=0.3, limit=None, limits=[2, 3], limits_weights=[0.85, 0.15], shuffle=True):
         intents = []
         all_intents_copy = copy.deepcopy(self.all_intents)
-        category = CATEGORY_SEQUENCE if random.random() < ratio_seq else CATEGORY_CONDITION
-        prev_domain = None
         
-        if limit is None:
-            limit = random.choices(limits, weights=limits_weights, k=1)[0]
+        while len(intents) < intents_count:    
+            category = CATEGORY_SEQUENCE if random.random() < ratio_seq else CATEGORY_CONDITION
+            prev_domain = None
             
-        cond_limit = 0 if category == CATEGORY_SEQUENCE else random.choice(list(range(1, limit)))
-        cond_count = 0
-        
-        for i in range(limit):
-            intent = None
-            domains = self.sample_domains_group(self.all_domains_groups)
+            if limit is None:
+                limit = random.choices(limits, weights=limits_weights, k=1)[0]
             
-            while intent is None: # in some iterations the sampled domain is empty
-                # sample domain 
-                domain = self.sample_domain(prev_domain, domains, all_intents_copy)
-                # get required return type
-                ret_type = random.choice(['bool'] * (cond_limit - cond_count) + ['void'] * (limit - i)) 
-                # sample intent by domain and required return type
-                intent = self.sample_domain_intents(all_intents_copy, domain, ret_type)
+            cond_limit = 0 if category == CATEGORY_SEQUENCE else random.choice(list(range(1, limit)))
+            cond_count = 0
+            
+            for i in range(limit):
+                intent = None
+                domains = self.sample_domains_group(self.all_domains_groups)
                 
-                if intent:
-                    intents.append((domain, intent, ret_type))
-                    cond_count += 1 if ret_type == CATEGORY_CONDITION else 0
-                    prev_domain = domain
+                while intent is None: # in some iterations the sampled domain is empty
+                    # sample domain 
+                    domain = self.sample_domain(prev_domain, domains, all_intents_copy)
+                    # get required return type
+                    ret_type = random.choice(['bool'] * (cond_limit - cond_count) + ['void'] * (limit - i)) 
+                    # sample intent by domain and required return type
+                    intent = self.sample_domain_intents(all_intents_copy, domain, ret_type)
+                    
+                    if intent:
+                        intents.append((domain, intent, ret_type))
+                        cond_count += 1 if ret_type == CATEGORY_CONDITION else 0
+                        prev_domain = domain
         
         if shuffle:
             random.shuffle(intents)
           
-        link_word = self.sample_link_word() if category ==  CATEGORY_CONDITION else None
-        quantifier = self.sample_quantifier(count=quantifiers_count)
+        link_words = self.sample_link_words(count=link_words_count)
+        quantifiers = self.sample_quantifiers(count=quantifiers_count)
             
-        return category, intents, link_words, quantifiers
+        return intents, link_words, quantifiers
     
-    def sample_link_word(self):
-        link_word = random.choice(self.link_words)
-        return link_word
+    def sample_link_words(self, count):
+        link_words = random.sample(self.all_link_words, count)
+        return link_words
     
-    def sample_quantifier(self, quantifier_prob=0.5):
-        quantifier = random.choice(self.quantifiers) if random.random() > quantifier_prob else None
-        return quantifier
+    def sample_quantifiers(self, count):
+        quantifiers = random.sample(self.all_quantifiers, count)
+        return quantifiers

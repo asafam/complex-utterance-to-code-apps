@@ -1,0 +1,158 @@
+scenarios:
+  - Meeting with a friend
+  - Family dinner
+  - Supermarket
+  - At the office
+  - At home
+  - Workout
+  - Kitchen
+  - Park
+  - Movie
+  - Doctor'a appointment
+  - A concert
+  - Stand up shows
+  - Stand up show
+  - Rally
+  - Lakers game
+  - Catch a flight
+  - Commuting to the office
+  - Yoga class
+  - Gym class
+  - Birthday party
+
+intents:
+  apps:
+    - name: Request a ride
+      intent: Order a ride share for you on your favorite ride sharing app
+    - name: Order a coffee
+      intent: Order a coffee to go for you in your favorite cafe app
+    - name: Start a workout
+      intent: Start a workout session on your favorite workout app
+  calendar:
+    - name: Schedule event
+      intent: Schedule something on your calendar
+    - name: Delete event
+      intent: Delete something on your calendar
+    - name: Get event
+      intent: Get information on calendar events or availability
+  events:
+    - name: Get event
+      intent: Inquire information on a public event
+  messaging:
+    - name: Send message
+      intent: Send a text message to anyone on your contact list
+    - name: Reply message
+      intent: Reply to a text message
+    - name: Get message
+      intent: Let you know if you received a text message (in general or from someone on you contact list)
+  navigation:
+    - name: Get direction
+      intent: Get the directions to travel somewhere
+    - name: Get duration
+      intent: Get the duration to travel to somewhere
+    - name: Get estimated arrival
+      intent: Get the estimated time of arrival
+    - name: Get estimated departure
+      intent: Get the time to depart to get to somewhere
+    - name: Get traffic info
+      intent: Get traffic information
+    - name: Get distance
+      intent: Get the distance to get somewhere
+  places:
+    - name: Get location
+      intent: Get information on a place (e.g., an open pharmacy or a parking lot near a stadium)
+  reminder:
+    - name: Create reminder
+      intent: Create a reminder
+    - name: Update reminder
+      intent: Update a reminder
+    - name: Delete reminder
+      intent: Delete a reminder
+  weather:
+    - name: Get weather
+      intent: Inquire on the weather information
+
+constraints:
+  calendar:
+    - name: Has schedule
+      intent: Queries information on your availability and scheduled events in your calendar (e.g., an end time of a scheduled meeting with someone)
+  events:
+    - name: Is event
+      intent: Queries events information - existance and event deatils (e.g., a performer's concert or a rally at a specific time)
+  messaging:
+    - name: Has message
+      intent: Check if you got text messages (e.g., from a specific sender, contains certain text, or was sent at a specific time)
+  navigation:
+    - name: Is duration
+      intent: Queries on the time duration to travel somewhere
+    - name: Is estimated arrival
+      intent: Queries on the time of arrival when leaving at a certain time
+    - name: Is estimated departure
+      intent: Queries on the time to depart to get somewhere by a certain time
+    - name: Is traffic info
+      intent: Queries on the traffic information (e.g., a traffic jam or an accident)
+    - name: Is distance
+      intent: Queries on the traveling distance (e.g. from one place to another or when taking route 94)
+  places:
+    - name: Is location
+      intent: Queries information on a place (e.g., existance of an open pharmacy or avilability of a parking lot near a stadium)
+  reminder:
+    - name: Has reminder
+      intent: Queries if you have specific reminders 
+  weather:
+    - name: Is weather
+      intent: Checks the weather conditions
+
+link_words:
+  - although
+  - as 
+  - as far as
+  - as if
+  - as long as
+  - as much as
+  - as soon as
+  - as though
+  # - because
+  - before
+  - by the time
+  - even if
+  - even though
+  - how
+  - if
+  - in case
+  - in order that
+  - in that
+  - in the event that
+  - no matter how
+  # - now that
+  - once
+  - only
+  - only if
+  - provided that
+  # - since
+  - so that
+  - supposing
+  # - than
+  - that
+  - though
+  - unless
+  - until
+  - when
+  - whenever
+  - where
+  - whereas
+  - wherever
+  - whether
+  - whether or not
+  - while
+
+quantifiers:
+  - some
+  - every
+  - few
+  - one
+  - two 
+  - all
+  - all but
+  - several
+  - not all
