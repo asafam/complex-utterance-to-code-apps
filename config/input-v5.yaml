@@ -1,0 +1,314 @@
+scenarios:
+  - Meeting with a friend
+  - Family dinner
+  - Supermarket
+  - At the office
+  - At home
+  - Workout
+  # - Barber's appointment
+  - Kitchen
+  - Park
+  - Movie
+  - Doctor'a appointment
+  - A concert
+  - Stand up shows
+  - Stand up show
+  - Rally
+  - Lakers game
+  - Catch a flight
+  - Commuting to the office
+  - Yoga class
+  - Birthday party
+
+intents:
+  alarm:
+    - name: Get alarm
+      void: true
+      bool: false
+      description: 
+    - name: Create alarm
+      void: true
+      bool: false
+      description: 
+    - name: Snooze alarm
+      void: true
+      bool: false
+      description: 
+    - name: Update alarm
+      void: true
+      bool: false
+      description: 
+    - name: Has alarm
+      type: bool
+      description: 
+    - name: Is alarm on/off/snoozed
+      type: bool
+      description:
+  apps:
+    - name: Request a ride
+      void: true
+      bool: false
+      description: Order a ride share for you on your favorite ride sharing app
+      intent: Order a ride share for you on your favorite ride sharing app
+    - name: Order a coffee
+      void: true
+      bool: false
+      description: Order a coffee to go for you from your favorite cafe
+      intent: Order a coffee to go for you from your favorite cafe
+    - name: Start a workout
+      void: true
+      bool: false
+      description: Start a workout session on your favorite workout app
+      intent: Start a workout session on your favorite workout app
+  calendar:
+    - name: Schedule event
+      void: true
+      bool: false
+      description: Schedule something on your calendar
+      intent: Schedule something on your calendar
+    - name: Delete event
+      void: true
+      bool: false
+      description: Delete something on your calendar
+      intent: Delete something on your calendar
+    - name: Get event
+      void: false
+      bool: true
+      description: Get information on calendar events or availability
+      intent: Get information on calendar events or availability
+      returns: calendar events or availability
+  events:
+    - name: Get event
+      void: true
+      bool: true
+      description: Get information on a public event
+      intent: Inquire information on a public event
+      returns: information on a public event
+    - name: Buy ticket
+      void: true
+      bool: true
+      description: Order tickets online for an event
+      intent: Order tickets online for an event
+      returns: tickets purchased
+  messaging:
+    - name: Send message
+      void: true
+      bool: false
+      description: Send a text message to anyone on your contact list
+      intent: Send a text message to anyone on your contact list
+    - name: Reply message
+      void: true
+      bool: false
+      description: Reply to a text message
+      intent: Reply to a text message
+    - name: Get message
+      void: false
+      bool: true
+      description: Check text messages you got (in general or from someone on you contact list)
+      intent: Check text messages you got (in general or from someone on you contact list)
+      returns: text messages you got
+  music:
+    - name: Play
+      void: true
+      bool: false
+      description: play a song
+    - name: Pause
+      void: true
+      bool: false
+      description: pause a song
+    - ame: Replay
+      void: true
+      bool: false
+      description: replay a song
+    - name: Skip
+      void: true
+      bool: false
+      description: skip a song
+    - name: Add to playlist
+      void: true
+      bool: false
+      description: add a song to a playlist
+    - name: Remove from playlist
+      void: true
+      bool: false
+      description: remove song from a playlist
+    - name: Is playing
+      type: bool
+      description: based on if a song is playing now
+    - name: Is in playlist
+      type: bool
+      description: based on if a song is in a playlist
+  navigation:
+    - name: Get direction
+      void: true
+      bool: true
+      description: Get the directions to somewhere
+      intent: Inquire on the directions to somewhere
+      returns: directions to get to somewhere
+    - name: Get duration
+      void: true
+      bool: true
+      description: Get the duration to travel to somewhere
+      intent: Inquire on the duration to travel to somewhere
+      returns: the estimated time of arrival
+    - name: Get estimated arrival
+      void: true
+      bool: true
+      description: Get the estimated time of arrival
+      intent: Inquire on the estimated time of arrival
+      returns: the estimated time of arrival
+    - name: Get estimated departure
+      void: true
+      bool: true
+      description: Get the time to depart to get to somewhere
+      intent: Inquire on the time to depart to get to somewhere
+      returns: the time to depart to get to somewhere
+    - name: Get traffic
+      void: true
+      bool: true
+      description: Get traffic information
+      intent: Inquire on traffic information
+      returns: traffic information
+    - name: Get distance
+      void: false
+      bool: false
+      description: Get the distance to get somewhere
+      intent: Inquire on the distance to get somewhere
+      returns: the distance to get to somewhere
+  places:
+    - name: Get location
+      void: true
+      bool: true
+      description: Get a location information (e.g., of a place or a place nearby)
+      intent: Inquire on location information (e.g., of a place or a place nearby)
+      returns: a place location information
+  reminder:
+    - name: Create reminder
+      void: true
+      bool: false
+      description: Create a reminder
+      intent: Create a reminder
+    - name: Get reminder
+      void: false
+      bool: true
+      description: Check for a reminder
+      intent: Check for a reminder
+      returns: reminders information
+    - name: Update reminder
+      void: true
+      bool: false
+      description: Update a reminder
+      intent: Update a reminder
+    - name: Delete reminder
+      void: true
+      bool: false
+      description: Delete a reminder
+      intent: Delete a reminder
+  timer:
+    - name: Create timer
+      void: true
+      bool: false
+      description: Create a timer
+    - name: Update timer
+      void: true
+      bool: false
+      description: Update a timer
+    - name: Delete timer
+      void: true
+      bool: false
+      description: Delete a timer
+    - name: Start timer
+      void: true
+      bool: false
+      description: Start a timer
+    - name: Restart timer
+      void: true
+      bool: false
+      description: Restart a timer
+    - name: Pause timer
+      void: true
+      bool: false
+      description: Pause a timer
+    - name: Resume timer
+      void: true
+      bool: false
+      description: Resume a timer
+  weather:
+    - name: Get weather
+      void: true
+      bool: true
+      description: Get weather information
+      intent: Inquire on the weather
+      returns: weather information
+
+domain_groups:
+  - domains: 
+    - weather
+    - messaging
+    - navigation
+    - reminder
+    - events
+    weight: 2
+  - domains: 
+    - places
+    - navigation
+    weight: 1
+  - domains: 
+    - calendar
+    - apps
+    - navigation
+    weight: 1
+
+link_words:
+  - although
+  - as 
+  - as far as
+  - as if
+  - as long as
+  - as much as
+  - as soon as
+  - as though
+  - because
+  - before
+  - by the time
+  - even if
+  - even though
+  - how
+  - if
+  - in case
+  - in order that
+  - in that
+  - in the event that
+  - no matter how
+  - now that
+  - once
+  - only
+  - only if
+  - provided that
+  - since
+  - so that
+  - supposing
+  # - than
+  - that
+  - though
+  - unless
+  - until
+  - when
+  - whenever
+  - where
+  - whereas
+  - wherever
+  - whether
+  - whether or not
+  - while
+
+quantifiers:
+  - some
+  - every
+  - few
+  - one
+  - two 
+  - all
+  - all but
+  - several
+  - not all

@@ -4,7 +4,6 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
             "name": "Python: Current File",
             "type": "python",
@@ -12,13 +11,116 @@
             "program": "${file}",
             "console": "integratedTerminal"
         },
-
         {
             "name": "Python: builder",
             "type": "python",
             "request": "launch",
             "program": "builder/builder.py",
+            "args": [
+                "lexicons/lexicon.txt",
+                "3",
+            ],
             "console": "integratedTerminal"
-        }
+        },
+        {
+            "name": "Python: mturk",
+            "type": "python",
+            "request": "launch",
+            "program": "mturk/mturk.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--limit",
+                "50",
+                "--inputfile",
+                "mturk/input-v5.yaml",
+                "--outputfile",
+                "mturk/output.csv",
+                "--intentscount",
+                "6",
+                "--conjunctionWordscount",
+                "4",
+                "--quantifierscount",
+                "2"
+            ],
+        },
+        {
+            "name": "Python: mturk2",
+            "type": "python",
+            "request": "launch",
+            "program": "mturk/mturk2.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--limit",
+                "50",
+                "--inputfile",
+                "mturk/input-v6.yaml",
+                "--outputfile",
+                "mturk/output2.csv",
+                "--intentscount",
+                "5",
+                "--constraintscount",
+                "3",
+                "--conjunctionWordscount",
+                "6",
+                "--quantifierscount",
+                "2",
+                "--scenarioscount",
+                "10"
+            ],
+        },
+        {
+            "name": "Python: main",
+            "type": "python",
+            "request": "launch",
+            "program": "mturk/main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--k",
+                "50",
+                "--inputcsvpathdir",
+                "data/TOPv2_Dataset",
+                "--inputconjunctionfilepath",
+                "config/conjunctions.yml",
+                "--outputfile",
+                "build/out123.csv",
+                "--intentscounts",
+                "2",
+                "3",
+                "4",
+                "--intentscountweights",
+                "0.6",
+                "0.3",
+                "0.1",
+                "--conjunctionwordscount",
+                "3",
+                "--conjunctionwordsmin",
+                "1",
+                "--skipdomains",
+                "music",
+                "timer"
+            ],
+        },
+        {
+            "name": "Python: results analyzer",
+            "type": "python",
+            "request": "launch",
+            "program": "results_analyzer/main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--resultsfilepath",
+                "~/Downloads/Batch_4761525_batch_results.csv",
+                "--outputfilepath",
+                "build/Batch_4761525_batch_results.txt",
+                "--outputfiletype",
+                "txt"
+            ],
+        },
+        {
+            "name": "Python: Current file",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
     ]
 }

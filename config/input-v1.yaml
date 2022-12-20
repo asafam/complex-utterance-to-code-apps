@@ -1,0 +1,210 @@
+scenarios:
+  - Meeting with a friend
+  - At the office
+  - At home
+  - A workout
+  - A barber appointment
+  - A movie
+  - A doctor appointment
+  - A dentist appointment
+  - A concert
+  - A stand up show
+  - The Eagles game
+  - Catch a flight
+  - Julie’s soccer practice
+  - Commuting to the office
+  - Yoga class
+  - Birthday party
+
+intents:
+  alarm:
+    - name: Get alarm
+      type: void
+      description: 
+    - name: Create alarm
+      type: void
+      description: 
+    - name: Snooze alarm
+      type: void
+      description: 
+    - name: Update alarm
+      type: void
+      description: 
+    - name: Has alarm
+      type: bool
+      description: 
+    - name: Is alarm on/off/snoozed
+      type: bool
+      description:
+  apps:
+    - name: Request a ride
+      type: void
+      description: Order a ride share for you on your favorite ride sharing app
+    - name: Order a coffee
+      type: void
+      description: Order a coffee to go for you from your favorite cafe
+    - name: Start a workout
+      type: void
+      description: Start a workout session on your favorite workout app
+  calendar:
+    - name: Schedule event
+      type: void
+      description: Schedule something on your calendar
+    - name: Delete event
+      type: void
+      description: Delete something on your calendar
+    - name: has event
+      type: bool
+      description: Check calendar for events or availability
+  events:
+    - name: Get event
+      type: void
+      description: Get information on a public event
+    - name: Has event
+      type: bool
+      description: Check information on a public event
+  messaging:
+    - name: Send message
+      type: void
+      description: Send a text message to anyone on your contact list
+    - name: React message
+      type: void
+      description: Reply to a text message
+    - name: has message
+      type: bool
+      description: Check if you have messages (in general or from someone on you contact list)
+  music:
+    - name: Play
+      type: void
+      description: Play a song
+    - name: Pause
+      type: void
+      description: Pause a song
+    - ame: Replay
+      type: void
+      description: Replay a song
+    - name: Skip
+      type: void
+      description: Skip a song
+    - name: Add to playlist
+      type: void
+      description: Add a song to a playlist
+    - name: Remove from playlist
+      type: void
+      description: Remove song from a playlist
+    - name: Is playing
+      type: bool
+      description: Check if a song is playing now
+    - name: Is in playlist
+      type: bool
+      description: Check if a song is in a playlist
+  navigation:
+    - name: Get distance
+      type: void
+      description: Get the distance to get somewhere
+    - name: Get direction
+      type: void
+      description: Get the directions to get somewhere
+    - name: Get duration
+      type: void
+      description: Get the duration to travel somewhere
+    - name: Get estimated arrival
+      type: void
+      description: Get an estimated time of arrival
+    - name: Get estimated departure
+      type: void
+      description: Get the time to depart to get somewhere
+    - name: Get estimated duration
+      type: void
+      description: Get the duration of a drive
+    - name: Get traffic
+      type: void
+      description: Get traffic information
+    - name: Get distance
+      type: void
+      description: Get the distance to get somewhere
+    - name: Is distance
+      type: bool
+      description: Check the distance to get somewhere
+    - name: Is duration
+      type: bool
+      description: Check the duration to travel somewhere
+    - name: Is estimated arrival
+      type: bool
+      description: Check an estimated time of arrival
+    - name: Is estimated departure
+      type: bool
+      description: Check the time to depart to get somewhere
+    - name: Is estimated duration
+      type: bool
+      description: Check the duration of a drive
+    - name: Is traffic
+      type: bool
+      description: Check traffic information
+    - name: Is distance
+      type: bool
+      description: Check the distance to get somewhere
+  places:
+    - name: Get location
+      type: void
+      description: Get location information (e.g., of a place or a place nearby)
+    - name: Has location
+      type: bool
+      description: Check location information (e.g., of a place or a place nearby)
+  reminder:
+    - name: Create reminder
+      type: void
+      description: Create a reminder
+    - name: Update reminder
+      type: void
+      description: Update a reminder
+    - name: Delete reminder
+      type: void
+      description: Delete a reminder
+  timer:
+    - name: Create timer
+      type: void
+      description: Create a timer
+    - name: Update timer
+      type: void
+      description: Update a timer
+    - name: Delete timer
+      type: void
+      description: Delete a timer
+    - name: Start timer
+      type: void
+      description: Start a timer
+    - name: Restart timer
+      type: void
+      description: Restart a timer
+    - name: Pause timer
+      type: void
+      description: Pause a timer
+    - name: Resume timer
+      type: void
+      description: Resume a timer
+  weather:
+    - name: Get weather
+      type: void
+      description: Get weather information
+    - name: Is weather
+      type: bool
+      description: Check weather information
+
+domain_groups:
+  - domains: 
+    - weather
+    - messaging
+    - navigation
+    - reminder
+    - events
+    weight: 2
+  - domains: 
+    - places
+    - navigation
+    weight: 1
+  - domains: 
+    - calendar
+    - apps
+    - navigation
+    weight: 1

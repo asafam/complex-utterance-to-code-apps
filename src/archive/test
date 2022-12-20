@@ -1,0 +1,100 @@
+
+1	S	SEQ		void	SEQ		SEQ
+1	S	COND	void	COND	COND
+1	S	LOOP	void	LOOP	LOOP
+
+1	SEQ		COND \n SEQ			void		COND \n SEQ			COND, and then SEQ
+1	SEQ		LOOP \n SEQ			void		LOOP \n SEQ			LOOP, and then SEQ
+3	SEQ		COND				void		COND				COND
+3	SEQ		LOOP				void		LOOP				LOOP
+3	SEQ		Atomic \n SEQ		void		Atomic \n SEQ		Atomic, and then SEQ
+5	SEQ		Atomic \n Atomic	void		Atomic \n Atomic	Atomic, and then Atomic
+
+1	COND	if BOOL :\n\t SEQ					void	if BOOL: \n\tSEQ				if BOOL, then SEQ
+1	COND	if BOOL :\n\t SEQ \n else: \n\t SEQ	void	if BOOL: \n\tSEQ\nelse: \n\tSEQ	if BOOL, then SEQ. Otherwise then SEQ
+
+1	LOOP	for item in List :\n\t SEQ			void	for item in List:\n\tSEQ		for each item in List, SEQ
+1	LOOP	for i in range( int_pos ):\n\t SEQ	void	for i in range(int_pos):\n\tSEQ	loop int_pos times and SEQ
+1	LOOP	while BOOL : \n\t SEQ				void	while BOOL: \n\tSEQ				while BOOL do SEQ
+
+1	BOOL	Bool and BOOL	bool	Bool and BOOL	Bool and BOOL
+1	BOOL	Bool or BOOL	bool	Bool or BOOL	Bool or BOOL
+2	BOOL	not Bool		bool	not Bool		not Bool
+3	BOOL	Bool			bool	Bool			Bool
+
+1	Atomic	STR				str		STR			STR
+1	Atomic	LIST			list	LIST		LIST
+1	Atomic	print ( STR )	void	print(STR)	print STR
+
+1	STR		Str .replace ( str_short , str_short )	str	Str.replace(str_short, str_short)	replace str_short with str_short in Str
+1	STR		Str .upper()	str		Str.upper()	Str to upper case
+1	STR		Str .lower()	str		Str.lower()	Str to lower case
+1	STR		input()			str		input()		string input from the user
+
+1 	Str		STR				str	STR			STR
+3 	Str		( STR + str )	str	(STR + str)	the result of concat STR with str
+5	Str		str				str	str			str
+
+1	LIST	reverse( List )				list			reverse(List)						reverse List
+1	LIST	range( int_pos )			list			range(int_pos)						range of numbers between 0 and int_pos
+1	LIST	[x for x in list if x != str_word ]	list	[x for x in list if x != str_word]	all elements in list that are not equal to str_word
+1	LIST	[x for x in list if x == str_word ]	list	[x for x in list if x != str_word]	all elements in list that are equal to str_word
+1	LIST	[a.upper() for x in list ]	list			[a.upper() for x in list]			list of upper case of all elements in list
+
+1	List	LIST	list	LIST	LIST
+2	List	list	list	list	list
+
+1	list	[]	list	[]	[]
+1	list	['alpha', 'bravo', 'charlie', 'delta', 'echo']	list	['alpha', 'bravo', 'charlie', 'delta', 'echo']	['alpha', 'bravo', 'charlie', 'delta', 'echo']
+
+1	str		"The big brown fox jumped over the lazy dog"	str	"The big brown fox jumped over the lazy dog"	"The big brown fox jumped over the lazy dog"
+1	str		"Hello world"	str	"Hello world"	"Hello world"
+1	str		"Ipsum lorum"	str	"Ipsum lorum"	"Ipsum lorum"
+
+1	str_word	"success"	str_word	"success"	"success"
+1	str_word	"key"		str_word	"key"		"key"
+
+1	str_short	"."			str_short	"."	"."
+1	str_short	","			str_short	","	","
+
+1	Bool	Str isupper()	bool	Str.isupper()	Str is all upper case
+1	Bool	Str islower()	bool	Str.islower()	Str is all lower case
+1	Bool	Str isdigit()	bool	Str.isdigit()	Str is a digit
+
+1	NUM		min( Num , Num , Num )		int min(int, int, int)		the lowest value in a group of numbers
+1	NUM		max( Num , Num , Num )		int min(int, int, int)		the lowest value in a group of numbers
+1	NUM		abs( int_neg )				int abs(int_neg)			the absolute value of 
+
+1	Num	int		int		int		int
+1	Num	float	float	float	float		
+
+1	Int len( Str )					int 	len(Str)				the length of Str
+1	Int	len( List )					int		len(List)				the lenght of List
+1	Int	index( str_short , Str )	int		index(str_short, Str)	the index of str_short in Str
+1	Int	index( str_short , List )	int		index(str_short, List)	the index of str_short in List
+1	Int	Int % int_pos				int		Int % int_pos			the result of Int modulo int_pos
+1	Int	Int + int					int		Int + int				add Int and int
+2	Int	int							int		int						int
+
+1	int	int_pos	int	int_pos	int_pos
+1	int	int_neg	int	int_neg	int_neg
+
+1	int_pos	9	int	9	9
+1	int_pos	8	int	8	8
+1	int_pos	7	int	7	7
+1	int_pos	6	int	6	6
+1	int_pos	5	int	5	5
+1	int_pos	4	int	4	4
+1	int_pos	3	int	3	3
+1	int_pos	2	int	2	2
+1	int_pos	1	int	1	1
+1	int_pos	0	int	0	0
+1	int_neg	-1	int	-1	-1
+1	int_neg	-2	int	-2	-2
+1	int_neg	-3	int	-3	-3
+
+1	float	float_pos	float	float_pos	float_pos
+1	float	float_neg	float	float_neg	float_neg
+
+1	float_pos	1.11	float	1.11	1.11
+1	float_neg	-1.11	float	-1.11	-1.11
