@@ -1,0 +1,767 @@
+HIT ID 3126F2F5F842OAOY364FBFVCGY9EPM:Intents (at least 4):
+1) what time does the sun set
+2) Stop texting
+3) Stop the alarm alert
+4) when is my next reminder for Callen remodelers
+* only if:only if
+* should:should
+* as / so long as:['as long as', 'so long as']
+
+Utterance:
+Stop texting and stop the alarm alert only if the sun has set and my next reminder for Callen is within 2 hours.
+\Annotations:
+* if the sun has set
+* Stop texting
+* stop the alarm alert
+* my next reminder for Callen is within 2 hours.
+Worker [A3O5RKGH6VB19C]Tue Jan 11 18:09:32 PST 2022 - Tue Jan 11 18:45:44 PST 2022 (2172 seconds)
+
+----------
+
+HIT ID 309D674SHZMLNI3AOAGJQ7QKEIHCB6:Intents (at least 3):
+1) Get rid of all my alarms
+2) How do I see reminders involving non-work events
+3) quit sending
+* should:should
+* only if:only if
+* in the event:in the event
+
+Utterance:
+Can you show me how to see reminders involving non-work events, and in the event they don't exist anymore can you get rid of all my alarms so they quit sending me notifications about these events?
+\Annotations:
+* get rid of all my alarms
+* how to see reminders involving non-work events
+* quit sending
+Worker [AKQAI78JTXXC9]Tue Jan 11 14:46:27 PST 2022 - Tue Jan 11 17:12:58 PST 2022 (8791 seconds)
+
+----------
+
+HIT ID 360ZO6N6J1KF8B043FW12X06KWI9MB:Intents (at least 2):
+1) They changed the start time of the baseball game so change the reminder to 1PM
+2) when should i leave home if i want to arrive at the music concert at 9 pm?
+* or else / otherwise (condition):['or else', 'otherwise']
+* as / so long as:['as long as', 'so long as']
+* if not:if not
+
+Utterance:
+Change the baseball game reminder to 1 PM and if not tell me when I should leave my house to get to the concert by 9 PM
+\Annotations:
+* tell me when I should leave my house to get to the concert by 9 PM
+* Change the baseball game reminder to 1 PM
+Worker [A3O5RKGH6VB19C]Tue Jan 11 23:43:49 PST 2022 - Tue Jan 11 23:48:38 PST 2022 (289 seconds)
+
+----------
+
+HIT ID 3UOMW19E6D7JY2M1N0P6NLQS4MV5CY:Intents (at least 3):
+1) Remind me what time I meet jim tomorrw
+2) Mad to Gene on Messenger.
+3) Please give me the best route to get to the mall at 5pm
+* even if:even if
+* only if:only if
+* in case:in case
+
+Utterance:
+Please give me the best route to get to the mall at 5 pm and even if the message from Gene arrives tomorrow morning remind me what time I meet Jim.
+\Annotations:
+* tomorrow morning remind me what time I meet Jim.
+* the message from Gene arrives
+* Please give me the best route to get to the mall at 5 pm
+Worker [A2NH4DSOLI6VRR]Tue Jan 11 17:17:17 PST 2022 - Tue Jan 11 18:32:35 PST 2022 (4518 seconds)
+
+----------
+
+HIT ID 3BCRDCM0ODVX04Y3KWG93AH05QFK66:Intents (at least 3):
+1) Message Maia and reminder to buy tickets to Charles White exhibit at the Art Institute of Chicago
+2) are any of my friends hosting parties in Wilmington this weekend
+3) please open my chats
+* providing / provided (that):['providing', 'provided', 'provided that']
+* only if:only if
+* in case:in case
+
+Utterance:
+Open my chats and message Maia to buy tickets to Charles White in Chicago in case my friends aren't hosting parties in Wilmington this weekend.
+\Annotations:
+* message Maia to buy tickets to Charles White in Chicago
+* in case my friends aren't hosting parties in Wilmington this weekend
+* Open my chats
+Worker [A3O5RKGH6VB19C]Tue Jan 11 18:06:24 PST 2022 - Tue Jan 11 18:29:54 PST 2022 (1410 seconds)
+
+----------
+
+HIT ID 3J94SKDEKIQT3USFNWKH7R8APM75DY:Intents (at least 2):
+1) Remind me to go to the meeting at 10 am.
+2) what is the cheapest route to take
+* even if:even if
+* only if:only if
+* or else / otherwise (condition):['or else', 'otherwise']
+
+Utterance:
+Remind me to go to the meeting at 10 even if the cheapest route is over 25 dollars.
+\Annotations:
+* Remind me to go to the meeting at 10
+* if the cheapest route is over 25 dollars.
+Worker [A3O5RKGH6VB19C]Tue Jan 11 23:43:44 PST 2022 - Tue Jan 11 23:44:48 PST 2022 (64 seconds)
+
+----------
+
+HIT ID 3DGDV62G7OAATUCIAM9E9EMNJVJP2V:Intents (at least 4):
+1) Is there an urgent care facility within 10 minutes of my hotel
+2) Can I get to Rockland by 5:30pm without delays from the storm?
+3) please update my daily reminder to be weekly
+4) What time is my reminder set for
+* in case:in case
+* even if:even if
+* or else / otherwise (condition):['or else', 'otherwise']
+
+Utterance:
+In case is there an urgent care facility within 10 minutes of my hotel. Even if I, get to Rockland by 5:30 pm without delay from the storm. Otherwise, please update my daily reminder to be weekly  or else, what time is my reminder set for.
+\Annotations:
+* In case is there an urgent care facility within 10 minutes of my hotel.
+* Even if I, get to Rockland by 5:30 pm without delay from the storm.
+* Otherwise, please update my daily reminder to be weekly
+* or else, what time is my reminder set for.
+Worker [AQVGGUUFUK10I]Tue Jan 11 23:58:57 PST 2022 - Wed Jan 12 00:18:09 PST 2022 (1152 seconds)
+
+----------
+
+HIT ID 34XASH8KLQN00YGBK4SYON0LP00MPJ:Intents (at least 3):
+1) advise new routes to work
+2) What time is the sunset
+3) Can you send a WhatsApp to my grandpa asking him if he wants food?
+* if not:if not
+* even if:even if
+* or else / otherwise (condition):['or else', 'otherwise']
+
+Utterance:
+Send a WhatsApp to Granda asking if he wants food and show me new routes to work even if it's after the sunset.
+\Annotations:
+* show me new routes to work
+* if it's after the sunset.
+* end a WhatsApp to Granda asking if he wants food
+Worker [A3O5RKGH6VB19C]Tue Jan 11 18:05:09 PST 2022 - Tue Jan 11 18:09:51 PST 2022 (282 seconds)
+
+----------
+
+HIT ID 3X55NP42EOHZEC81EMNJSORFP9JP36:Intents (at least 3):
+1) How long will it take me to get to work giving time for traffic
+2) ignore incoming video message
+3) If I leave my school at 3 o'clock, what time will I arrive to John's birthday party?
+* as / so long as:['as long as', 'so long as']
+* in the event:in the event
+* if not:if not
+
+Utterance:
+Can you ignore any incoming video messages for me because I need to know how long will it take me to get to work in the event of traffic, and can you also tell me what time I will arrive at John's birthday party if I leave school at 3 o'clock?
+\Annotations:
+* ignore any incoming video messages
+* I need to know how long will it take me to get to work in the event of traffic
+* and can you also tell me what time I will arrive at John's birthday party if I leave school at 3 o'clock?
+Worker [A2OVOVZBJYUO]Tue Jan 11 15:45:13 PST 2022 - Tue Jan 11 16:42:58 PST 2022 (3465 seconds)
+
+----------
+
+HIT ID 3UEDKCTP9VRG44C836L19OHW01ZK75:Intents (at least 2):
+1) City hall location near my house
+2) Show me my alarms
+* even if:even if
+* in the event:in the event
+* only if:only if
+
+Utterance:
+Show me my alarms in the event that the city hall near my house is closed tomorrow.
+\Annotations:
+* the city hall near my house is closed tomorrow
+* Show me my alarms
+Worker [A3O5RKGH6VB19C]Tue Jan 11 18:06:11 PST 2022 - Tue Jan 11 18:20:20 PST 2022 (849 seconds)
+
+----------
+
+HIT ID 37G6BXQPLQMNOMPD3JJ4BKLMLUVEQD:Intents (at least 2):
+1) friends who have responded to my event on Sunday
+2) set an alarm to go off in 1 hour another 30 minutes after that
+* as / so long as:['as long as', 'so long as']
+* unless:unless
+* should:should
+
+Utterance:
+Should any of my friends who have responded to my event on Sunday contact me, can you set an alarm to go off in 1 hour another 30 minutes after that happens?
+\Annotations:
+* friends who have responded to my event on Sunday
+* set an alarm to go off in 1 hour another 30 minutes after that happens
+Worker [AKQAI78JTXXC9]Tue Jan 11 14:58:16 PST 2022 - Tue Jan 11 17:19:43 PST 2022 (8487 seconds)
+
+----------
+
+HIT ID 3FCO4VKOZ4EDI4KY7KAYBT4RG437E8:Intents (at least 2):
+1) Is there a faster way to get to Old Town
+2) Can I get to the airport before 6pm?
+* in case:in case
+* should:should
+* if:if
+
+Utterance:
+In case I can get to the airport before 6 PM, what's the fastest way to get to the Old Town?
+\Annotations:
+* what's the fastest way to get to the Old Town
+* In case I can get to the airport before 6 PM
+Worker [A3O5RKGH6VB19C]Tue Jan 11 23:50:28 PST 2022 - Tue Jan 11 23:55:37 PST 2022 (309 seconds)
+
+----------
+
+HIT ID 34R0BODSP10YV06FJRV1D9QVPY85ER:Intents (at least 2):
+1) Start making a video message for John.
+2) Are there any lane closings on interstate 77 South to Marietta
+* should:should
+* or else / otherwise (condition):['or else', 'otherwise']
+* unless:unless
+
+Utterance:
+Make a video message for John unless there is a lane closing on interstate 77 South to Marietta
+\Annotations:
+* Make a video message for John
+* a lane closing on interstate 77 South to Marietta
+Worker [A3O5RKGH6VB19C]Tue Jan 11 18:08:16 PST 2022 - Tue Jan 11 18:33:03 PST 2022 (1487 seconds)
+
+----------
+
+HIT ID 3OB6JN3A9QQLCBWQXWWNTI00QIOMRB:Intents (at least 2):
+1) Remove all the reminders this weekend.
+2) deactivate alarm only with a swipe
+* even if:even if
+* as / so long as:['as long as', 'so long as']
+* in case:in case
+
+Utterance:
+Remove all reminders this weekend and just in case, deactivate the alarm with just a swipe.
+\Annotations:
+* deactivate the alarm with just a swipe
+* Remove all reminders this weekend
+Worker [A3O5RKGH6VB19C]Tue Jan 11 23:46:29 PST 2022 - Tue Jan 11 23:53:48 PST 2022 (439 seconds)
+
+----------
+
+HIT ID 3MXX6RQ9EV6KW8R5E0S22TJL39FP4R:Intents (at least 2):
+1) Take me through my alarms
+2) how many people expected at the amphitheatre
+* even if:even if
+* or else / otherwise (condition):['or else', 'otherwise']
+* in the event:in the event
+
+Utterance:
+In the event that the show at the ampitheatre gets cancelled, cancel the alarm I set as a reminder. 
+\Annotations:
+* cancel the alarm I set
+* event that the show at the ampitheatre gets cancelled
+Worker [A3KZA2E46HTD38]Tue Jan 11 18:03:34 PST 2022 - Tue Jan 11 18:07:24 PST 2022 (230 seconds)
+
+----------
+
+HIT ID 3O71U79SRBQXDQW3CLWSJS5WCK7MSZ:Intents (at least 2):
+1) Is Flagler a one-way street all day, or just at rush hour?
+2) what is the forecast for tomorrow
+* unless:unless
+* in the event:in the event
+* should:should
+
+Utterance:
+In the event that the weather forecast for tomorrow is nice enough to run errands, let me know if Flagler will be a one-way street all day, or just at rush hour.
+\Annotations:
+* let me know if Flagler will be a one-way street all day, or just at rush hour.
+* In the event that the weather forecast for tomorrow is nice enough to run errands
+Worker [A345TDMHP3DQ3G]Tue Jan 11 22:20:55 PST 2022 - Tue Jan 11 22:23:49 PST 2022 (174 seconds)
+
+----------
+
+HIT ID 391FPZIE4CNR0PNWATBF6OFOGVTHU1:Intents (at least 3):
+1) I had an alarm set for 5am that I need to change to 5pm
+2) update reminder to pay electric bill one week before to one day before due date
+3) Add guitar strings to music reminder
+* only if:only if
+* even if:even if
+* should:should
+
+Utterance:
+After you have changed my alarm for my guitar lesson from 5am to 5pm and updated the reminder for me to pay the bill for my guitar lesson from one week to one day before the due date, you should also add guitar strings to my music reminder.
+\Annotations:
+* After you have changed my alarm for my guitar lesson from 5am to 5pm
+* and updated the reminder for me to pay the bill for my guitar lesson from one week to one day before the due date
+* you should also add guitar strings to my music reminder.
+Worker [A23TH591R5OPKP]Tue Jan 11 18:23:30 PST 2022 - Tue Jan 11 20:53:07 PST 2022 (8977 seconds)
+
+----------
+
+HIT ID 3EPG8DX9LKR2SRV5S5BC7LPZ35AP5W:Intents (at least 2):
+1) cancel this message
+2) Did Sarah go to the 20 year reunion?
+* providing / provided (that):['providing', 'provided', 'provided that']
+* in the event:in the event
+* unless:unless
+
+Utterance:
+Unless Sarah went to the 20 year reunion cancel this message.
+\Annotations:
+* cancel this message
+* Sarah went to the 20 year reunion
+Worker [A39MKVROUZ1UWR]Tue Jan 11 20:36:16 PST 2022 - Tue Jan 11 21:45:11 PST 2022 (4135 seconds)
+
+----------
+
+HIT ID 3LG268AV387N0N4DGY84GAVRHGXERE:Intents (at least 4):
+1) where is nearest rest stop
+2) how many reminders are set for today
+3) It's every monday morning that I'll need to reschedule the meeting reminder to.
+4) When is my reminder to color my hair?
+* even if:even if
+* in case:in case
+* should:should
+
+Utterance:
+Set reminders for today for the nearest rest stop and for coloring my hair next week, and should it be a monday morning, I'll need to reschedule the meeting reminder to.
+\Annotations:
+* the nearest rest stop
+* Set reminders for today
+* should it be a monday morning, I'll need to reschedule the meeting reminder to.
+* for coloring my hair next week
+Worker [A1198W1SPF1R4]Tue Jan 11 21:01:47 PST 2022 - Tue Jan 11 21:46:17 PST 2022 (2670 seconds)
+
+----------
+
+HIT ID 3W0KKJIARRAK4IHRDBD7NODRBL5K8S:Intents (at least 3):
+1) How long will it take me to drive from San Diego to Los Angeles today
+2) how many alarms do I have currently?
+3) Is there flooding downtown by the Fort Pitt Bridge  going into town?
+* should:should
+* only if:only if
+* or else / otherwise (condition):['or else', 'otherwise']
+
+Utterance:
+What time will it take me to drive from San Diego to Los Angeles today should there be flooding downtown by the Fort Pitt Bridge going into town and how many alarms I currently have?
+\Annotations:
+* What time will it take me to drive from San Diego to Los Angeles today
+* how many alarms I currently have?
+* should there be flooding downtown by the Fort Pitt Bridge going into tow
+Worker [A39VVWV1GHLMFD]Tue Jan 11 22:51:53 PST 2022 - Tue Jan 11 23:16:49 PST 2022 (1496 seconds)
+
+----------
+
+HIT ID 3KLL7H3EGD2RD4CWFJLK2AH7U22HVQ:Intents (at least 2):
+1) Remind me to text Maddie at 3 PM on Wednesday about picking up the cake.
+2) send a text to my boyfriend.
+* should:should
+* or else / otherwise (condition):['or else', 'otherwise']
+* in the event:in the event
+
+Utterance:
+Send a text to my boyfriend in the event he's not busy, otherwise remind me to text Maddie at 3 on Wednesday to pick up the cake.
+\Annotations:
+* remind me to text Maddie at 3 on Wednesday to pick up the cake
+* Send a text to my boyfriend
+Worker [A3O5RKGH6VB19C]Tue Jan 11 18:08:42 PST 2022 - Tue Jan 11 18:36:04 PST 2022 (1642 seconds)
+
+----------
+
+HIT ID 3LCXHSGDLT7Z124QVN896K0N3IGES2:Intents (at least 3):
+1) I want to change a reminder
+2) Shhhh!
+3) when is my next meeting reminder?
+* as / so long as:['as long as', 'so long as']
+* unless:unless
+* should:should
+
+Utterance:
+Shhhh, change my next reminder and tell me when my next meeting reminder is unless it's this week.
+\Annotations:
+* change my next reminder
+* Shhhh
+* tell me when my next meeting reminder is
+Worker [A3O5RKGH6VB19C]Tue Jan 11 23:52:09 PST 2022 - Tue Jan 11 23:57:50 PST 2022 (341 seconds)
+
+----------
+
+HIT ID 3K2CEDRACB2YSQ9I1L1ITX1IE3LMTO:Intents (at least 2):
+1) What time is sunrise on Saturday
+2) Remove the snooze option on my alarm
+* even if:even if
+* as / so long as:['as long as', 'so long as']
+* only if:only if
+
+Utterance:
+Set my alarm for sunrise on Saturday, only if  you can disable snooze.
+\Annotations:
+* Set my alarm for sunrise on Saturday,
+* can disable snooze.
+Worker [A249LDVPG27XCE]Tue Jan 11 23:37:47 PST 2022 - Tue Jan 11 23:45:28 PST 2022 (461 seconds)
+
+----------
+
+HIT ID 3H781YYV6TJ0G2H5KNDZGPW951UETR:Intents (at least 2):
+1) How icy are the roads this morning
+2) How many people have purchased tickets for the Rhiannon concert in Atlanta this Saturday night
+* providing / provided (that):['providing', 'provided', 'provided that']
+* as / so long as:['as long as', 'so long as']
+* if not:if not
+
+Utterance:
+if not icy are the roads in this morning how many people have purchased tickets for the rhiannon concert in atlanta this saturday night
+\Annotations:
+* morning
+* this
+Worker [A2WEJGVMNWUX8J]Wed Jan 12 00:56:54 PST 2022 - Wed Jan 12 01:04:36 PST 2022 (462 seconds)
+
+----------
+
+HIT ID 3X878VYTIEJ5OIKU2VU4TBPRS5I7FQ:Intents (at least 2):
+1) add mowing the lawn to my chores reminder
+2) What is the low temperature for the day
+* if not:if not
+* in the event:in the event
+* in case:in case
+
+Utterance:
+Leave my schedule clear if the low temperature is below 40 today, if not, add a reminder to mow the lawn to my chore list.
+\Annotations:
+* add a reminder to mow the lawn to my chore list.
+* Leave my schedule clear if the low temperature is below 40 today
+Worker [A2XK59FYAFO9EX]Tue Jan 11 14:45:36 PST 2022 - Tue Jan 11 14:57:01 PST 2022 (685 seconds)
+
+----------
+
+HIT ID 34R3P23QHS24STC15TQGOC0L1B4HW0:Intents (at least 3):
+1) Like the text from Brian
+2) how many people expected to show up on first star wars showing
+3) How much rain has Lubbock gotten this month
+* if not:if not
+* only if:only if
+* providing / provided (that):['providing', 'provided', 'provided that']
+
+Utterance:
+I liked text from Brian was asking the amount of rain Lubbock gotten this month if not, can you tell him the number of people likely to attend the first star wars show?
+\Annotations:
+* I liked text from Brian
+* the number of people likely to attend the first star wars s
+* asking the amount of rain Lubbock gotten this month
+Worker [A39VVWV1GHLMFD]Tue Jan 11 22:51:51 PST 2022 - Tue Jan 11 23:09:10 PST 2022 (1039 seconds)
+
+----------
+
+HIT ID 3LXX8KJXPWA38ELGGVBEU1PBFWX9OQ:Intents (at least 2):
+1) Please delete all my reminders about library for this week
+2) Can you send a WhatsApp to my grandpa asking him if he wants food?
+* in the event:in the event
+* even if:even if
+* only if:only if
+
+Utterance:
+Send a Whatsapp to my grandpa asking if he wants food and delete all my library reminders for this week even if grandpa answers.
+\Annotations:
+* delete all my library reminders for this week
+* Send a Whatsapp to my grandpa asking if he wants food
+* even if grandpa answers
+Worker [A3O5RKGH6VB19C]Tue Jan 11 18:05:05 PST 2022 - Tue Jan 11 18:07:47 PST 2022 (162 seconds)
+
+----------
+
+HIT ID 3WJGKMRWVIAE2F1U267PLXEKH3TCDD:Intents (at least 2):
+1) snooze my alarm for 10 minutes
+2) Set alarm for 3 hours
+* or else / otherwise (condition):['or else', 'otherwise']
+* in the event:in the event
+* even if:even if
+
+Utterance:
+Snooze my alarm for 10 minutes even if we need to set another one 3 hours from now.
+\Annotations:
+* set another one 3 hours from now.
+* Snooze my alarm for 10 minutes
+Worker [A3O5RKGH6VB19C]Tue Jan 11 18:08:54 PST 2022 - Tue Jan 11 18:37:46 PST 2022 (1732 seconds)
+
+----------
+
+HIT ID 3MNJFORX8B5Q1E6BE2F7VRBV1ZN5F9:Intents (at least 2):
+1) What time does the sun rise
+2) What alarms are set for tomorrow?
+* in case:in case
+* or else / otherwise (condition):['or else', 'otherwise']
+* providing / provided (that):['providing', 'provided', 'provided that']
+
+Utterance:
+At what time is the sun supposed to rise in case it's necessary to adjust what alarms are currently set for tomorrow?
+\Annotations:
+* At what time is the sun supposed to rise
+* what alarms are currently set for tomorrow
+Worker [AJH2N4RI8WA6U]Tue Jan 11 21:07:14 PST 2022 - Tue Jan 11 21:12:40 PST 2022 (326 seconds)
+
+----------
+
+HIT ID 3I7KR83SNAEKIN01I3JLNK82VRNK9H:Intents (at least 2):
+1) how many people expected at the amphitheatre
+2) Add buy zucchini, squash and butter to my grocery list reminders please.
+* as / so long as:['as long as', 'so long as']
+* if:if
+* even if:even if
+
+Utterance:
+Add buy zucchini, squash and buttery to my grocery list if the amount of people expected at the amphitheatre is greater than 100.
+\Annotations:
+* if the amount of people expected at the amphitheatre is greater than 100
+* Add buy zucchini, squash and buttery to my grocery list
+Worker [A3O5RKGH6VB19C]Tue Jan 11 18:09:06 PST 2022 - Tue Jan 11 18:43:26 PST 2022 (2060 seconds)
+
+----------
+
+HIT ID 368IUKXGA59YBVVJXOLHZR3ZZ0LP6C:Intents (at least 2):
+1) repeat this reminder weekly.
+2) add an event monday
+* in the event:in the event
+* as / so long as:['as long as', 'so long as']
+* if not:if not
+
+Utterance:
+Add a weekly dinner date at the Outdoor Bistro starting on Monday and remind me about it each week, in the event that the temperature is above 65°F.
+\Annotations:
+* remind me about it each week
+* Add a weekly dinner date at the Outdoor Bistro starting on Monday
+Worker [AZLZA0Q87TJZO]Tue Jan 11 17:04:09 PST 2022 - Tue Jan 11 17:14:03 PST 2022 (594 seconds)
+
+----------
+
+HIT ID 3TRB893CSJBB2IGPDF0MBWP3TKI7GP:Intents (at least 2):
+1) how many people expected to show up on first star wars showing
+2) Shut alarm up right now
+* in the event:in the event
+* unless:unless
+* even if:even if
+
+Utterance:
+Shut alarm up right now even if there would not be many people showing up on first star wars showing.
+\Annotations:
+* there would not be many people showing up on first star wars showing.
+* Shut alarm up right now
+Worker [A1198W1SPF1R4]Tue Jan 11 21:02:18 PST 2022 - Tue Jan 11 21:54:31 PST 2022 (3133 seconds)
+
+----------
+
+HIT ID 3PA41K45VN5HFV9OGYQ9553VUB5P7B:Intents (at least 2):
+1) Alternate route please
+2) am i able to combine Ralph's and my reminders together?
+* even if:even if
+* unless:unless
+* as / so long as:['as long as', 'so long as']
+
+Utterance:
+Alternate my route unless I can't combine Ralph and my reminders together.
+\Annotations:
+* Alternate my route
+* I can't combine Ralph and my reminders together.
+Worker [A3O5RKGH6VB19C]Tue Jan 11 18:09:19 PST 2022 - Tue Jan 11 18:44:38 PST 2022 (2119 seconds)
+
+----------
+
+HIT ID 3I6NF2WGIGXWFE26PMLPDCB72EN5G8:Intents (at least 2):
+1) play a beyonce song in my next alarm
+2) What's my current location?
+* if not:if not
+* even if:even if
+* in case:in case
+
+Utterance:
+Play a Beyonce song for my next alarm in case my current location is 5 miles away from the destination.
+\Annotations:
+* Play a Beyonce song for my next alarm
+* my current location is 5 miles away from the destination
+Worker [A3O5RKGH6VB19C]Tue Jan 11 18:08:29 PST 2022 - Tue Jan 11 18:34:51 PST 2022 (1582 seconds)
+
+----------
+
+HIT ID 3CVBMEMMXBHP2EB0XLI4WW148KV7HO:Intents (at least 2):
+1) can you cancel my alarm for today
+2) show my reminders for next week
+* in case:in case
+* providing / provided (that):['providing', 'provided', 'provided that']
+* only if:only if
+
+Utterance:
+Can you cancel my 5:00 am alarm for today Only if show my next week reminders.
+\Annotations:
+* alarm for today
+* show my next week reminders.
+Worker [A374WBG5XU7RD1]Tue Jan 11 15:33:00 PST 2022 - Tue Jan 11 15:41:07 PST 2022 (487 seconds)
+
+----------
+
+HIT ID 3RWB1RTQDJOLF9E7Q3IFJ5ZQ5VBP8Y:Intents (at least 3):
+1) Where is Madinet Nasr Traffic administration ?
+2) ignore my message alert
+3) Is there a WaWa on my route
+* only if:only if
+* in case:in case
+* or else / otherwise (condition):['or else', 'otherwise']
+
+Utterance:
+Where exactly is Madinet Nasr traffic administration, only if there is a WaWa on my route, and ignore my message alert
+\Annotations:
+* Where exactly is Madinet Nasr traffic administration
+* ignore my message alert
+* WaWa on my route
+Worker [A3774HPOUKYTX7]Tue Jan 11 14:44:22 PST 2022 - Tue Jan 11 14:59:57 PST 2022 (935 seconds)
+
+----------
+
+HIT ID 3D3B8GE892SLTEXHVVOTJ1U1P1T9P7:Intents (at least 3):
+1) What all are the active alarms?
+2) Distance between  Spain and Portugal
+3) Did Sarah go to the 20 year reunion?
+* unless:unless
+* should:should
+* unless:unless
+
+Utterance:
+Are you aware if Sarah went to the 20 year reunion, and what are the active alarms necessary should one need to travel the distance between Spain and Portugal?
+\Annotations:
+* what are the active alarms
+* travel the distance between Spain and Portugal
+* Are you aware if Sarah went to the 20 year reunion
+Worker [AJH2N4RI8WA6U]Tue Jan 11 21:12:46 PST 2022 - Tue Jan 11 21:15:01 PST 2022 (135 seconds)
+
+----------
+
+HIT ID 3FDWKV9VCN3DS3O71QRSYTNKXHSMUF:Intents (at least 2):
+1) Turn off all alarms set for Sunday
+2) change the reminder from one bag of coffee to two
+* providing / provided (that):['providing', 'provided', 'provided that']
+* as / so long as:['as long as', 'so long as']
+* in the event:in the event
+
+Utterance:
+Change the reminder from one bag of coffee to two in the event that all alarms are turned off for Sunday.
+\Annotations:
+* all alarms are turned off for Sunday
+* Change the reminder from one bag of coffee to two
+Worker [A3O5RKGH6VB19C]Tue Jan 11 23:47:55 PST 2022 - Tue Jan 11 23:54:41 PST 2022 (406 seconds)
+
+----------
+
+HIT ID 3H1C3QRA01KJULFUY1I9RFW5HFUCE6:Intents (at least 4):
+1) change the remider for the staff meeting today from 3 to 4
+2) Can you send a WhatsApp to my grandpa asking him if he wants food?
+3) Silence alarm
+4) are there tolls on my trip to new york
+* even if:even if
+* in case:in case
+* unless:unless
+
+Utterance:
+Change the reminder for the staff meeting today from 3pm to 4pm. Silence my alarm during the meeting. In case the staff meeting is finished before 5pm, send a WhatsApp to my grandpa asking him if he wants food. If there are tolls on my trip to new york tomorrow, set a reminder at 6 am for bringing the I-Pass.
+\Annotations:
+* Change the reminder for the staff meeting today from 3pm to 4pm
+* In case the staff meeting is finished before 5pm, send a WhatsApp to my grandpa asking him if he wants food.
+* Silence my alarm during the meeting.
+* If there are tolls on my trip to new york tomorrow, set a reminder at 6 am for bringing the I-Pass.
+Worker [A1198W1SPF1R4]Tue Jan 11 18:02:56 PST 2022 - Tue Jan 11 19:55:15 PST 2022 (6739 seconds)
+
+----------
+
+HIT ID 3D3B8GE892SLTEXHVVOTJ1U1P1TP9N:Intents (at least 3):
+1) How many miles is it from Tokyo to Kyoto
+2) Change tomorrows alarm to 9pm.
+3) Will it snow today?
+* only if:only if
+* if:if
+* if not:if not
+
+Utterance:
+If it snows today, change tomorrow's alarm to 9pm. If not, let me know how many miles it is from Tokyo to Kyoto and set an alarm so I can leave in enough time to arrive in Kyoto by midnight.
+\Annotations:
+* let me know how many miles it is from Tokyo to Kyoto
+* change tomorrow's alarm to 9pm
+* If it snows today
+Worker [AZLZA0Q87TJZO]Tue Jan 11 17:04:07 PST 2022 - Tue Jan 11 17:11:19 PST 2022 (432 seconds)
+
+----------
+
+HIT ID 3P7RGTLO6EEYN6A6A9XLJFJM195KAW:Intents (at least 2):
+1) This Friday?
+2) Show me all texts.
+* providing / provided (that):['providing', 'provided', 'provided that']
+* as / so long as:['as long as', 'so long as']
+* in case:in case
+
+Utterance:
+As long as it is this Friday, in case you were wondering.
+Providing you show me all the texts.
+\Annotations:
+* As long as it is this Friday, in case you were
+* wondering.
+Providing you show me all the text
+Worker [A2QTL039A5VV3I]Tue Jan 11 14:44:22 PST 2022 - Tue Jan 11 17:10:40 PST 2022 (8778 seconds)
+
+----------
+
+HIT ID 3QX22DUVOOID5ID76G1XUFP3BO1MV4:Intents (at least 3):
+1) Are any of my friends having parties this weekend
+2) How can I get to the RV show in Raleigh from Charlotte?
+3) weekend getaway near me
+* providing / provided (that):['providing', 'provided', 'provided that']
+* in case:in case
+* in the event:in the event
+
+Utterance:
+In the event that none of my friends are having parties this weekend, I would like to plan a weekend getaway to the RV show in Raleigh.
+\Annotations:
+* In the event that none of my friends are having parties this weekend
+* to the RV show in Raleigh.
+* I would like to plan a weekend getaway
+Worker [A3L2XKXABNO0N5]Tue Jan 11 17:44:33 PST 2022 - Tue Jan 11 20:13:46 PST 2022 (8953 seconds)
+
+----------
+
+HIT ID 3A9LA2FRWSFJHTHRFYM2QVESADAHXT:Intents (at least 3):
+1) Update reminder to shred checks after being cashed.
+2) Wake me on the 5th at 8am.
+3) when is the nearest intersection
+* in the event:in the event
+* if:if
+* or else / otherwise (condition):['or else', 'otherwise']
+
+Utterance:
+Wake me on the 5th at 8am if I need to update  the reminder to shred checks after being cashed. We can meet at the nearest intersection in order to work together on this.
+\Annotations:
+* the reminder to shred checks after being cashed.
+* Wake me on the 5th at 8am
+* the nearest intersection
+Worker [A1PMZUBGXFANCI]Tue Jan 11 14:46:58 PST 2022 - Tue Jan 11 15:29:38 PST 2022 (2560 seconds)
+
+----------
+
+HIT ID 3K3IX1W4S6SZYX7MN12TFW5LVJBPA2:Intents (at least 2):
+1) Set a reminder for my anniversary next tuesday.
+2) how many people expected at the amphitheatre
+* as / so long as:['as long as', 'so long as']
+* unless:unless
+* providing / provided (that):['providing', 'provided', 'provided that']
+
+Utterance:
+Set a reminder for my anniversary next Tuesday unless how many people are expected at the amphitheatre?
+\Annotations:
+* Set a reminder for my anniversary next Tuesday
+* how many people are expected at the amphitheatre?
+Worker [A12ATVBE1I4567]Tue Jan 11 17:25:52 PST 2022 - Tue Jan 11 18:09:53 PST 2022 (2641 seconds)
+
+----------
+
+HIT ID 3A3KKYU7P3IQK7DCWQ6TGH8HIX3MWE:Intents (at least 2):
+1) cancel the reminder to buy milk
+2) What time is sunrise tomorrow
+* unless:unless
+* as / so long as:['as long as', 'so long as']
+* unless:unless
+
+Utterance:
+Cancel the reminder to buy milk tomorrow unless the sunrises before 9 AM.
+\Annotations:
+* Cancel the reminder to buy milk
+* unless the sunrises before 9 AM.
+Worker [A3O5RKGH6VB19C]Tue Jan 11 23:43:50 PST 2022 - Tue Jan 11 23:52:47 PST 2022 (537 seconds)
+
+----------
+

@@ -52,7 +52,7 @@ def main(path, outputfile):
                         
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Extract the onthologies from dataset files')
-    parser.add_argument('--path', type=str, help='dataset path', default='/Users/asaf/Downloads/TOPv2_Dataset/*.tsv')
+    parser.add_argument('--path', type=str, help='dataset path', default='/Users/asaf/Workspace/biu/thesis-task-builder/data/TOPv2_Dataset/*.tsv')
     parser.add_argument('--outputfile', type=str, help='dataset path', default='./onthologies.tsv')
     args = parser.parse_args()
     

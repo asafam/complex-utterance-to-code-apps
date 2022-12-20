@@ -95,9 +95,9 @@ if __name__ == '__main__':
     parser.add_argument('--inputfile', type=str, help='input file')
     parser.add_argument('--outputfile', type=str, help='output file')
     parser.add_argument('--intentscount', type=int, default=5, help='number of intents to sample')
-    parser.add_argument('--linkwordscount', type=int, default=4, help='number of link words to sample')
+    parser.add_argument('--conjunctionWordscount', type=int, default=4, help='number of link words to sample')
     parser.add_argument('--quantifierscount', type=int, default=2, help='number of quantifiers to sample')
     args = parser.parse_args()
     
     main(input_file=args.inputfile, output_file=args.outputfile, limit=args.limit, 
-         intents_count=args.intentscount, link_words_count=args.linkwordscount, quantifiers_count=args.quantifierscount)
+         intents_count=args.intentscount, link_words_count=args.conjunctionWordscount, quantifiers_count=args.quantifierscount)

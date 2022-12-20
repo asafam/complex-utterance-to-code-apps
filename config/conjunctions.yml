@@ -15,9 +15,9 @@ conditionals:
   - display: only if
   - display: in the event
   - display: in case
-  - display: or / otherwise
+  - display: or else / otherwise (condition)
     verification: 
-      - or 
+      - or else
       - otherwise
   - display: if not
   - display: even if 

@@ -97,12 +97,12 @@ if __name__ == '__main__':
     parser.add_argument('--outputfile', type=str, help='output file')
     parser.add_argument('--intentscount', type=int, default=5, help='number of intents to sample')
     parser.add_argument('--constraintscount', type=int, default=5, help='number of constraints to sample')
-    parser.add_argument('--linkwordscount', type=int, default=3, help='number of link words to sample')
+    parser.add_argument('--conjunctionWordscount', type=int, default=3, help='number of link words to sample')
     parser.add_argument('--quantifierscount', type=int, default=2, help='number of quantifiers to sample')
     parser.add_argument('--scenarioscount', type=int, default=10, help='number of scenarios to sample')
     args = parser.parse_args()
     
     main(input_file=args.inputfile, output_file=args.outputfile, limit=args.limit, 
          intents_count=args.intentscount, constraints_count=args.constraintscount,
-         link_words_count=args.linkwordscount, quantifiers_count=args.quantifierscount,
+         link_words_count=args.conjunctionWordscount, quantifiers_count=args.quantifierscount,
          scenarios_count=args.scenarioscount)

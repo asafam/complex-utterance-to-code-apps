@@ -66,7 +66,7 @@ def get_domain_icon(domain):
     elif domain == 'music':
         icon = "music-note"
     elif domain == 'navigation':
-        icon = "map"
+        icon = "truck"
     elif domain == 'places':
         icon = "pin-map"
     elif domain == 'reminder':
@@ -83,12 +83,13 @@ def get_domain_icon(domain):
 def write_output_file(path, data, delimiter=','):
     with open(path, 'w', newline='') as f:
         file_handler = csv.writer(f, delimiter=delimiter)
-        file_handler.writerow(['id', 'intents', 'intent-icons', 'conjunctions', 'min-intents', 'min-conjunctions'])
+        file_handler.writerow(['id', 'intents', 'intent-icons', 'min-intents', 'conjunction-words', 'min-conjunction-words'])
         for i, item in enumerate(data):  
             intents_str = " | ".join([intent['utterance'] for intent in item['intents']])
             icons_str = " | ".join([get_domain_icon(domain[0]) for domain in item['domains']])
-            conjunctions_str = " | ".join([f"{c['display']}:{c['verifications'] if 'verifications' in c else c['display']}" for c in item['conjunctions']])
+            conjunctions_str = " | ".join([f"{c['display']}:{c['verification'] if 'verification' in c else c['display']}" for c in item['conjunctions']])
             min_intents = len(item['intents'])
+            min_conjunctions = 1
             
-            line = [i, intents_str, icons_str, conjunctions_str, min_intents, ]
+            line = [i, intents_str, icons_str, min_intents, conjunctions_str, min_conjunctions ]
             file_handler.writerow(line)
