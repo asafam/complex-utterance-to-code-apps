@@ -162,7 +162,7 @@
       "console": "integratedTerminal",
       "args": [
         "--input_file_path_regexp",
-        "/Users/asaf/Workspace/biu/thesis-api/tests/phase_a/*_001-020.py",
+        "/Users/asaf/Workspace/biu/complex-utterance-to-code-api/tests/phase_a/*_001-020.py",
         "--output_file",
         "data/api-file-ingestor/output.csv.gz"
       ]
