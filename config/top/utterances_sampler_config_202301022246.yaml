@@ -1,0 +1,56 @@
+clock:
+  weight: 0.1
+  intents:
+    - CREATE_ALARM
+    - DELETE_ALARM
+    - GET_ALARM
+    - UPDATE_ALARM
+    - CREATE_TIMER
+    - DELETE_TIMER
+    - UPDATE_TIMER
+music:
+  weight: 0.1
+  intents:
+    - CREATE_PLAYLIST_MUSIC
+    - ADD_TO_PLAYLIST_MUSIC
+    - PLAY_MUSIC
+events:
+  weight: 0.333
+  intents:
+    - GET_EVENT
+navigation:
+  intents:
+    - GET_DIRECTIONS
+    - GET_DISTANCE
+    - GET_ESTIMATED_ARRIVAL
+    - GET_ESTIMATED_DEPARTURE
+    - GET_ESTIMATED_DURATION
+    - GET_INFO_ROAD_CONDITION
+    - GET_INFO_ROUTE
+    - GET_INFO_TRAFFIC
+    - UPDATE_DIRECTIONS
+messages:
+  weight: 0.1
+  intents:
+    - GET_MESSAGE
+    - GET_SUNRISE
+    - GET_SUNSET
+    - REACT_MESSAGE
+    - REPLY_MESSAGE
+    - SEND_MESSAGE
+    - SEND_TEXT_MESSAGE
+weather:
+  intents:
+    - GET_WEATHER
+reminders:
+  weight: 0
+  intents:
+    - CREATE_REMINDER
+    - DELETE_REMINDER
+    - GET_REMINDER
+    - GET_REMINDER_AMOUNT
+    - GET_REMINDER_DATE_TIME
+    - GET_REMINDER_LOCATION
+    - UPDATE_REMINDER
+    - UPDATE_REMINDER_DATE_TIME
+    - UPDATE_REMINDER_TODO
