@@ -3,6 +3,14 @@ import glob
 import os
 from pathlib import Path
 import pandas as pd
+from enum import Enum
+
+
+class States(Enum):
+    IMPORTS = "imports"
+    DOCSTRING = "docstring"
+    TEST = "test"
+    CODE = "code"
 
 
 def get_input_file_paths(input_file_path_regexp: str):
@@ -20,7 +28,13 @@ def get_input_file_paths(input_file_path_regexp: str):
 
 
 def read_data(
-    input_file_path: str, id_prefix: str = "def test_", id_suffix: str = "():\n"
+    input_file_path: str,
+    docstring_prefix: str = '"""',
+    docstring_suffix: str = '"""',
+    id_prefix: str = "def test_",
+    id_suffix: str = "():\n",
+    code_block_start_str: str = "# start code block to test",
+    code_block_end_str: str = "# end code block to test",
 ):
     """
     Read data from input file and parse it into a list of id, text and code dictionaries.
@@ -34,18 +48,16 @@ def read_data(
     returns:
     A list of id, text and test dictionaries.
     """
-    states = {
-        "in function": "in function",
-        "in docstring": "in docstring",
-        "in code": "in code",
-        "out of function": "out of function",
-    }
     with open(input_file_path, "r") as input_file:
         data = []
         id = None
+        imports = None
         text = None
+        code = None
         test = None
-        state = states.get("out of function")
+        leading_spaces = 0
+
+        state = None
         for line in input_file:
             if line.startswith(id_prefix):
                 if id and text and test:
@@ -53,33 +65,58 @@ def read_data(
                         (item for item in data if id and item["id"] == id), None
                     )
                     if not item:
-                        item = {"id": id, "text": text, "test": test}
+                        item = {
+                            "id": id,
+                            "text": text,
+                            "code": code,
+                            "test": test,
+                            "imports": imports,
+                        }
                         data.append(item)
                     else:
                         item[f"code_{len(item.keys()) - 3 + 1}"] = test
 
-                state = states.get("in function")
+                state = States.TEST
+                leading_spaces = len(line) - len(line.lstrip()) + 4
                 id = str(line[len(id_prefix) : -len(id_suffix)].strip().split("_")[0])
                 text = None
                 test = None
+                code = None
 
-            elif line.strip().startswith('"""') and state == states.get("in function"):
-                state = states.get("in docstring")
-            elif line.strip().startswith('"""') and state == states.get("in docstring"):
-                state = states.get("in code")
-            elif state == states.get("in docstring"):
-                if text is None:
-                    text = line.strip()
+            elif state == States.DOCSTRING:
+                if line.strip().startswith(docstring_prefix):
+                    state = States.TEST
                 else:
-                    text += f" {line}"
-            elif state == states.get("in code"):
-                if test is None:
-                    leading_spaces = len(line) - len(line.lstrip())
-                    test = line[leading_spaces:]
+                    text = line.strip() if text is None else f"{text} {line.strip()}"
+
+            elif state == States.TEST:
+                if line.strip().startswith(docstring_suffix):
+                    state = States.DOCSTRING  # start code block to test
                 else:
-                    test += line[leading_spaces:] if line.strip() != "" else line
+                    if line.strip().startswith(code_block_start_str):
+                        state = States.CODE
+                    test = add_line_to_var(test, line, leading_spaces=leading_spaces)
+
+            elif state == States.CODE:
+                if line.strip().startswith(code_block_end_str):
+                    state = States.TEST
+                    test = add_line_to_var(test, line, leading_spaces=leading_spaces)
+                else:
+                    code = add_line_to_var(code, line, leading_spaces=leading_spaces)
+
+            if line.strip().startswith("import") or line.strip().startswith("from"):
+                state = States.IMPORTS
+                imports = add_line_to_var(imports, line, leading_spaces=leading_spaces)
 
         return data
+
+
+def add_line_to_var(var, line, leading_spaces=0):
+    if var is None:
+        var = line[leading_spaces:]
+    else:
+        var += line[leading_spaces:] if line.strip() != "" else line
+    return var
 
 
 def write_data(data: list, output_file: str):
